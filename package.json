@@ -2,7 +2,6 @@
   "name": "hot-words",
   "version": "0.1.0",
   "private": true,
-  "homepage": "./" ,
   "dependencies": {
     "chart.js": "^2.8.0",
     "react": "^16.8.6",

@@ -14,7 +14,8 @@ function App() {
   return (
     <div className="page">
       <Nav />
-      <Content />
+      <Content contentType="en" />
+      <Content contentType="cn" />
       <About />
     </div>
   );

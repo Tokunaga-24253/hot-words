@@ -8,7 +8,7 @@ function Nav() {
                 <nav>
                     <ul>
                         <li><a href="index.html">Home Page</a></li>
-                        <li><a href="about.html">About</a></li>
+                        <li><a href="#about">About</a></li>
                     </ul>
                 </nav>
             </header>

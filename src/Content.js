@@ -3,18 +3,24 @@ import './css/Content.css';
 import Chart from './chart';
 
 class Content extends Component {
-    constructor(){
-      super();
+    constructor(props){
+      super(props);
       this.state = {
         chartData:{}
       }
     }
-  
-    componentWillMount(){
-      this.getChartData();
+    
+    componentWillMount(props){
+      if(this.props.contentType === "en"){
+        this.getChartEnglishData();
+
+      }
+      else if(this.props.contentType === "cn"){
+        this.getChartChineseData();
+      }
     }
   
-    getChartData(){
+    getChartEnglishData(){
       // Ajax calls here
       this.setState({
         chartData:{
@@ -72,11 +78,64 @@ class Content extends Component {
         }
       });
     }
-  
+
+    getChartChineseData(){
+      // Ajax calls here
+      this.setState({
+        chartData:{
+          labels: [
+            '框架',
+            '性能',
+            '移动',
+            '可视化',
+            '算法',
+            '开源',
+            '小程序',
+            '工程化',
+            '数据结构',
+            '全栈',
+          ],
+          datasets:[
+            {
+              label:'Number of statistics',
+              data:[
+                39,
+                35,
+                34,
+                25,
+                23,
+                23,
+                19,
+                15,
+                14,
+                10,
+              ],
+              backgroundColor:[
+                'rgba(255, 99, 132, 0.6)',
+                'rgba(54, 162, 235, 0.6)',
+                'rgba(255, 206, 86, 0.6)',
+                'rgba(75, 192, 192, 0.6)',
+                'rgba(153, 102, 255, 0.6)',
+                'rgba(255, 159, 64, 0.6)',
+                'rgba(255, 99, 132, 0.6)',
+                'rgba(54, 162, 235, 0.6)',
+                'rgba(255, 206, 86, 0.6)',
+                'rgba(75, 192, 192, 0.6)',
+                'rgba(153, 102, 255, 0.6)',
+                'rgba(255, 159, 64, 0.6)',
+                'rgba(255, 99, 132, 0.6)',
+
+              ]
+            }
+          ]
+        }
+      });
+    }
+    
     render() {
       return (
         <div className="Content">
-          <Chart chartData={this.state.chartData} location="Hang Zhou" legendPosition="top"/>
+          <Chart chartData={this.state.chartData} location="Hang Zhou" legendPosition="top" datatype={this.props.contentType}/>
         </div>
       );
     }

@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import {Bar, Line, Pie} from 'react-chartjs-2';
+import {Bar} from 'react-chartjs-2';
 import './css/chart.css';
 
 class Chart extends Component{
@@ -18,6 +18,7 @@ class Chart extends Component{
   }
 
   render(){
+        //todo:点击按钮。图表转换
     /*
     const bar=document.getElementById("barChart");
     
@@ -58,51 +59,7 @@ class Chart extends Component{
           options={{ 
                 title:{
                         display:this.props.displayTitle,
-                        text:'The hottest words about front-end in '+this.props.location,
-                        fontSize:25
-                },
-                scales:{
-                        yAxes: [{
-                        ticks: {
-                                beginAtZero: true
-                        }
-                        }]
-                },
-                legend:{
-                        display:false,
-                        position:this.props.legendPosition
-                } }}
-        />
-
-        <Line
-          id={"lineChart"}
-          data={this.state.chartData}
-          options={{ 
-                title:{
-                        display:this.props.displayTitle,
-                        text:'The hottest words about front-end in '+this.props.location,
-                        fontSize:25
-                },
-                scales:{
-                        yAxes: [{
-                        ticks: {
-                                beginAtZero: true
-                        }
-                        }]
-                },
-                legend:{
-                        display:false,
-                        position:this.props.legendPosition
-                } }}
-        />
-        
-        <Pie
-          id={"pieChart"}
-          data={this.state.chartData}
-          options={{ 
-                title:{
-                        display:this.props.displayTitle,
-                        text:'The hottest words about front-end in '+this.props.location,
+                        text:`The most common ${ this.props.datatype === "en" ? "english" : "chinese"} term about front-end in ${this.props.location}`,
                         fontSize:25
                 },
                 scales:{

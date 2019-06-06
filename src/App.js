@@ -8,6 +8,8 @@ import './css/App.css';
 import './css/Nav.css';
 import './css/Content.css';
 import './css/About.css';
+import './css/chart.css';
+
 
 
 function App() {

@@ -134,7 +134,7 @@ class Content extends Component {
     
     render() {
       return (
-        <div className="Content">
+        <div className="chartArea" >
           <Chart chartData={this.state.chartData} location="Hang Zhou" legendPosition="top" datatype={this.props.contentType}/>
         </div>
       );

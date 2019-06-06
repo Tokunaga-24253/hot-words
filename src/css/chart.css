@@ -1,0 +1,44 @@
+#Container {
+    position: relative;
+    height: 300px;
+    width: 100%;
+    display: inline-block;
+    /*background-color: aquamarine;*/
+}
+
+#bar,#pie,#line {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    /*background-color: aqua;*/
+    width: 70%;
+    height: 80%;
+}
+
+
+.xiaoshi {
+    display: none;
+}
+
+.btnContainer {
+    position: absolute;
+    top: 96%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    display: flex;
+}
+
+.barBtn,.pieBtn,.lineBtn {
+    margin: 5px;
+    background-color: #f0c8dd;
+    width: 60px;
+    transition-duration: 0.4s;
+    border: none;
+    color: rgb(43, 52, 59);
+}
+
+.barBtn:hover,.pieBtn:hover {
+    background-color: #4CAF50; /* Green */
+    color: white;
+}

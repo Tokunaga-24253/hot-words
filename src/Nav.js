@@ -2,7 +2,7 @@ import React from "react";
 
 function Nav() {
     return(
-        <div className="container">
+        <div className="navContainer">
             <header>
                 <h2>Hot-Words</h2>
                 <nav>

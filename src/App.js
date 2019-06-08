@@ -1,24 +1,21 @@
 import React from 'react';
 
-import Nav from './Nav'
-import Content from './Content'
-import About from './About'
+import Header from './components/Header/Header'
+import Content from './components/Content/Content'
+import About from './components/About/About'
+import Footer from './components/Footer/Footer'
 
-import './css/App.css';
-import './css/Nav.css';
-import './css/Content.css';
-import './css/About.css';
-import './css/chart.css';
 
 
 
 function App() {
   return (
     <div className="page">
-      <Nav />
+      <Header />
       <Content contentType="en" />
       <Content contentType="cn" />
       <About />
+      <Footer />
     </div>
   );
 }

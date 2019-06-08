@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 import {Bar,Pie,Line} from 'react-chartjs-2';
+import './Chart.css';
 
 class Chart extends Component{
   constructor(props){
@@ -117,7 +118,7 @@ class Chart extends Component{
                   title:{
                           display:this.props.displayTitle,
                           text:`The most common ${ this.props.datatype === "en" ? "english" : "chinese"} term about front-end in ${this.props.location}`,
-                          //fontSize:25
+                          fontSize:20
                   },
                   scales:{
                           yAxes: [{
@@ -148,7 +149,7 @@ class Chart extends Component{
                   title:{
                           display:this.props.displayTitle,
                           text:`The most common ${ this.props.datatype === "en" ? "english" : "chinese"} term about front-end in ${this.props.location}`,
-                          //fontSize:25
+                          fontSize:20
                   },
                   
                   legend:{
@@ -170,7 +171,7 @@ class Chart extends Component{
                   title:{
                           display:this.props.displayTitle,
                           text:`The most common ${ this.props.datatype === "en" ? "english" : "chinese"} term about front-end in ${this.props.location}`,
-                          //fontSize:25
+                          fontSize:20
                   },
                   scales:{
                     yAxes: [{

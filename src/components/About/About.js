@@ -1,5 +1,6 @@
 import React from 'react';
-import me from './image/me.JPG';
+import me from '../../image/me.JPG';
+import './About.css'
 
 function About() {
     return(
@@ -8,6 +9,7 @@ function About() {
             <img src={me} alt="" />
             <br/>
             <p>I'm <strong>Tokunaga</strong>, a Chinese student.<br />Learning Front-End knowleage.</p>
+            
         </div>
     );
 };

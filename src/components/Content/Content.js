@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
-import './css/Content.css';
-import Chart from './chart';
+import './Content.css';
+import Chart from '../Chart/Chart';
 
 class Content extends Component {
     constructor(props){

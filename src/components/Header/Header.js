@@ -1,8 +1,9 @@
 import React from "react";
+import './Header.css'
 
-function Nav() {
+function Header() {
     return(
-        <div className="navContainer">
+        <div className="header">
             <header>
                 <h2>Hot-Words</h2>
                 <nav>
@@ -16,4 +17,4 @@ function Nav() {
     );
 };
 
-export default Nav;
+export default Header;
